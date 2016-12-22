@@ -69,9 +69,10 @@ class PocketSphinxSTT(AbstractSTTEngine):
 
     SLUG = 'sphinx'
     VOCABULARY_TYPE = vocabcompiler.PocketsphinxVocabulary
-
+    
+    # hard coding hmm path
     def __init__(self, vocabulary, hmm_dir="/usr/local/share/" +
-                 "pocketsphinx/model/hmm/en_US/hub4wsj_sc_8k"):
+                 "pocketsphinx/model/fr_FR/hmm/lium_french_f0"):
 
         """
         Initiates the pocketsphinx instance.
