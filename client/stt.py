@@ -122,6 +122,9 @@ class PocketSphinxSTT(AbstractSTTEngine):
                                  "make sure that you have set the correct " +
                                  "hmm_dir in your profile.",
                                  hmm_dir, ', '.join(missing_hmm_files))
+        
+        # for debug
+        logger.info("DEBUG/INFO hmm_dir= '%s' ", hmm_dir)
 
         self._decoder = ps.Decoder(hmm=hmm_dir, logfn=self._logfile,
                                    **vocabulary.decoder_kwargs)
