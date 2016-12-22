@@ -103,6 +103,8 @@ class Jasper(object):
             logger.warning("tts_engine not specified in profile, defaulting " +
                            "to '%s'", tts_engine_slug)
         tts_engine_class = tts.get_engine_by_slug(tts_engine_slug)
+        
+        logger.info("end of config file")
 
         # Initialize Mic
         self.mic = Mic(tts_engine_class.get_instance(),
